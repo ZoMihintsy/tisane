@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.group:hover .group-hover\:block {
+    display: block;
+}
+.group .submenu-icon {
+    transition: transform 0.2s ease-in-out;
+}
+.group:hover .submenu-icon {
+    transform: rotate(180deg);
+}
+
+/* Styles pour le menu mobile (hamburger) */
+#mobile-menu-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 40; /* Au-dessus de tout sauf le menu lui-même */
+}
+#mobile-menu {
+    z-index: 50; /* Doit être au-dessus de l'overlay */
+}
+.slider-wrapper {
+    width: 100%;
+    max-width: 1000px; /* Largeur du slider */
+    max-height: 500px; /* Largeur du slider */
+    overflow: hidden;
+    position: relative;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+}
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+}
+.slider-image-container {
+    flex-shrink: 0;
+    width: 100%;
+height: 100%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.slider-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
+height: 300px; /* Hauteur des images */
+}
+.slider-image-container img {
+    width: 150%;
+    height: 40%;
+    object-fit: cover;
+}
+.slider-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: white;
+    border: none;
+    padding: 1rem 1.2rem;
+    cursor: pointer; 
+    font-size: 1.5rem; 
+    border-radius: 9999px;
+    z-index: 10;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider-nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8); 
+    transform: translateY(-50%) scale(1.05); 
+}
+.prev-btn { left: 1.5rem; } 
+.next-btn { right: 1.5rem; } 
+.text-primary-blue { color: #0056b3; }
+.bg-primary-blue { background-color: #0056b3; }
+.text-accent-green { color: #28a745; }
+.hover\:bg-accent-green:hover { background-color: #28a745; }
+.text-dark-gray { color: #222; }
+.bg-light-gray { background-color: #f4f4f4; }
+.text-medium-gray { color: #666; }
+.text-brand-brown { color: #8B4513; }
+.bg-amber-light { background-color: #fff8e1; }
+.border-gray-light { border-color: #ddd; }
