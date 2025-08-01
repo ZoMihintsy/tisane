@@ -8,7 +8,12 @@ new Produit;
 <div class="dashboard-section">
         <h2>Les produits</h2>
         <x-auth-session-status class="mb-4" :status="session('status')" />
-
+        <select name="cats" wire:model="cats" wire:input="list" id="" class="rounded ">
+        <option value="">---liste par catégorie---</option>
+        @foreach($categorie as $cat)
+            <option value="{{$cat->id}}">{{$cat->nom}}</option>
+        @endforeach
+        </select>
         <div class="card-grid">
         
             @if(empty($produit))
