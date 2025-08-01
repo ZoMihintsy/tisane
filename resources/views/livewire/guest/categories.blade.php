@@ -143,7 +143,13 @@ new Categories;
 
 </style>
      <div class="card-grid">
-     
+     @if(empty($categorie))
+        <p>
+        <center>
+            Bad request :(
+        </center>
+        </p>
+    @else
             <div class="card category-card">
                 <h3>{{$categorie->nom}}</h3>
                 <p><strong>ID:</strong> {{$categorie->id}}</p>
@@ -152,7 +158,7 @@ new Categories;
                     <strong>Produits actif :</strong> {{$produit}}
                 </p>
             </div>
-        
+    @endif
      
     </div>
 
